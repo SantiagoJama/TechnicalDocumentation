@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+/* 
+    Aclaración importante:
+
+    Desarrollado por; Santiago Jama, como solución a los proyectos 
+    propuestos en el curso llevado a cabo en FreeCodeCamp. 
+
+    Los diseños pertenecen a la organización FreeCodeCamp. 
+    FreeCodeCamp provee los diseños como muestra, según los requerimientos (user stories) de los proyectos.
+
+    Todo el HTML y el CSS es de mi autoría.
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#main-container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+        "nav  main"
+    ;    
+}
+
+        #navbar{
+            grid-area: nav;
+            position: fixed;
+            overflow-y: scroll;
+            width: 25%;
+            height: 100%;
+        }
+        .main-header{
+            font-size: 1.3rem;
+            text-align: center;
+            padding: 1.2em;
+            font-weight: bolder;
+            border-bottom: 2px solid black;
+            background-color: hsla(0, 8%, 81%,50%);
+        }        
+            .nav-container>li{
+                border-bottom: 1px solid black;
+                padding: 1em 0em 1em 2em;
+                list-style-type: none;
+            }
+            .nav-link{
+                font-size: 1.3rem;
+                font-weight: bolder;
+            }
+            .nav-link:hover{
+                border-bottom: 2px solid black;
+                
+            }
+
+    
+#main-doc{
+    grid-area: main;
+}
+
+    .main-section>header{
+        border-bottom: 1px solid black;
+        margin-top: 1em;
+        text-align: left;
+        padding-left: 2em;
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+   
+    article>p{
+      padding: 2em;
+        font-size: 1.2rem;
+        line-height: 160%;
+        text-align: left;
+        padding-left: 4em;
+    }
+    .internt-list{
+        margin-top: 1em;
+        margin-bottom: 1em;
+        list-style-type: disc;
+        padding-left: 8em;
+        font-size: 1.2rem;
+        line-height: 160%;
+        text-align: left;
+    }
+   
+    code{
+        padding: .5em;
+        display: inline-block;
+        margin-left: 6em;
+        background-color: hsla(300, 2%, 84%,70%);
+    }
+    .mdn-link{
+        font-size: 1.4rem;
+        background-color: rgb(104, 104, 187);
+        color: white;
+        padding: .1em;
+        border-radius: 10%;
+    }
+
+@media (max-width: 800px){
+    #main-container{
+        grid-template-rows: .5fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "nav"
+            "main"
+        ; 
+        position: relative;   
+    }
+    #navbar{
+        grid-area: nav;
+        overflow-y: scroll;
+        width: 100%;
+        height: 100%;
+        border: 2px solid blue;
+        position: relative;
+    }
+        #main-doc{
+            position: absolute;
+        }
+
+}
+    
